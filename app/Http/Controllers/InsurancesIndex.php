@@ -20,8 +20,14 @@ class InsurancesIndex extends Controller
 
 		$response = json_decode($request->getBody(), 1);
 
+		$items = collect(array_get($response, 'data'));
+
+		$items = $items->filter(function ($item) {
+			return $item['anzeige'] == true;
+		});
+
 		return [
-			'items' => array_get($response, 'data')
+			'items' => $items->take(3)
 		];
 	}
 
@@ -42,7 +48,7 @@ class InsurancesIndex extends Controller
 
 		shuffle($products);
 
-		$products = array_slice($products, 0, 3);
+		$products = array_slice($products, 0, 10);
 
 		return [
 			'headers' => [
