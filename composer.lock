@@ -4,8 +4,72 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "929b818fe913c444741bf5a6a4d28622",
+    "content-hash": "192ed432d9124020559f1bd7c8b65dce",
     "packages": [
+        {
+            "name": "chriskonnertz/deeply",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chriskonnertz/DeepLy.git",
+                "reference": "ca70575bf765c2bc3c0e51f0271a627e4e837745"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chriskonnertz/DeepLy/zipball/ca70575bf765c2bc3c0e51f0271a627e4e837745",
+                "reference": "ca70575bf765c2bc3c0e51f0271a627e4e837745",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.2@dev",
+                "phpunit/phpunit": "5.7"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "You might want to install Guzzle if you want to use it as the HTTP client for DeepLy"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ChrisKonnertz\\DeepLy\\Integrations\\Laravel\\DeepLyServiceProvider"
+                    ],
+                    "aliases": {
+                        "DeepLy": "ChrisKonnertz\\DeepLy\\Integrations\\Laravel\\DeepLyFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ChrisKonnertz\\DeepLy": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Konnertz"
+                }
+            ],
+            "description": "DeepLy is a PHP client for the DeepL.com translation API",
+            "keywords": [
+                "api",
+                "client",
+                "deepl",
+                "deeply",
+                "english",
+                "french",
+                "german",
+                "language",
+                "translate",
+                "translation"
+            ],
+            "time": "2017-10-02T13:11:02+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

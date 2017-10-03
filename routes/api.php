@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/insurances', 'InsurancesIndex');
+Route::get('/translate', 'TranslateGet');
